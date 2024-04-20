@@ -16,24 +16,24 @@ in **M**ultimedia **CA**scade **R**ecommendation systems.
 - faiss-gpu 1.7.1
 
 ### 2.2 Feature Processing & Data Preparation
-To process the multi-modal features, just use: 
+To process the multi-modal features, please use: 
 ```
 python ./preprocessing/process_mm_features_[dataset_name].py
 ```
-After the processing, execute the data preparation procedure for model training as follows:
+After processing, execute the data preparation procedure for model training as follows:
 ```
 python ./preprocessing/prepare_data_[dataset_name].py
 ```
-**NOTE**: Please modify the path in config.py to the folder where you are storing the data.
+**NOTE**: Please modify the path in config.py to the folder where you store the data.
 
 ### 2.3. Ranking Model Pre-Training
-To pre-train ranking models, run the following command:
+To pre-train the ranking model, run the following command:
 ```
 python train_ranking_model.py -d [dataset_name] -r [ranking_model_name]
 ```
 
 ## 3. DAMCAR Training and Evaluation
-To execute DAMCAR training and evaluation, just use
+To execute DAMCAR training and evaluation, please use
 ```
 python train_DAMCAR.py -d [dataset_name] -m [debias_method] -r [ranking_model_name]
 ```
