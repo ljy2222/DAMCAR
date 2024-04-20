@@ -1,7 +1,7 @@
 # Mitigating Sample Selection Bias with Robust Domain Adaption in Multimedia Recommendation
 
 ## 1. Introduction
-This is the implementation code of DAMCAR, a novel debiasing framework which introduces **D**omain **A**daptation to mitigate Sample Selection Bias (SSB) 
+This is the implementation code of DAMCAR, a novel debiasing framework that introduces **D**omain **A**daptation to mitigate Sample Selection Bias (SSB) 
 in **M**ultimedia **CA**scade **R**ecommendation systems.
 
 ## 2. Preparation
@@ -38,5 +38,5 @@ To execute DAMCAR training and evaluation, just use
 python train_DAMCAR.py -d [dataset_name] -m [debias_method] -r [ranking_model_name]
 ```
 
-## 4. Acknowledgements
+## 4. Acknowledgments
 Our code is based on the implementation of [DeepMatch](https://github.com/bbruceyuan/DeepMatch-Torch) and [DeepCTR](https://github.com/shenweichen/DeepCTR-Torch).
