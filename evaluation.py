@@ -68,17 +68,12 @@ def test_main(conf, debias_method, ranking_model_name):
         D, I = index.search(user_embs, K1)
         ranking_candidates = {}
         recalls, precisions = 0, 0
-        recall_list, precision_list = [], []
         for i, uid in enumerate(ground_truth_list['userid']):
             pred = [item_profile['feedid'].values[x] for x in I[i]]
             ranking_candidates[uid] = pred
             hit = len(set(pred[:K1]) & set(test_true_label[uid])) * 1.0
             recalls += hit / len(test_true_label[uid])
             precisions += hit / K1
-            recall_score = recall_K(test_true_label[uid], pred, K1)
-            precision_score = precision_K(test_true_label[uid], pred, K1)
-            recall_list.append(recall_score)
-            precision_list.append(precision_score)
         recall = round(recalls / len(ground_truth_list), 4)
         precision = round(precisions / len(ground_truth_list), 4)
         f1 = round(2 * (recall * precision) / (recall + precision), 4)

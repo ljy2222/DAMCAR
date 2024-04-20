@@ -9,14 +9,6 @@ def cal_logloss_auc(y_true, y_pred):
     return auc, logloss
 
 
-def recall_K(y_true, y_pred, K):
-    return len(set(y_pred[:K]) & set(y_true)) * 1.0 / len(set(y_true))
-
-
-def precision_K(y_true, y_pred, K):
-    return len(set(y_pred[:K]) & set(y_true)) * 1.0 / K
-
-
 def cal_ndcg_map_hr(y_true_dict, y_pred_dict, K):
     ndcg_list = []
     map_list = []
