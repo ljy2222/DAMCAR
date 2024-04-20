@@ -33,7 +33,7 @@ python train_ranking_model.py -d [dataset_name] -r [ranking_model_name]
 ```
 
 ## 3. DAMCAR Training and Evaluation
-To execute DAMCAR training and evaluation, please use
+To execute DAMCAR training and evaluation, please use:
 ```
 python train_DAMCAR.py -d [dataset_name] -m [debias_method] -r [ranking_model_name]
 ```
